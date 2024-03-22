@@ -1,0 +1,83 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "93a19905-6de3-4a15-840b-edff3a3651aa",
+   "metadata": {},
+   "source": [
+    "MAFIA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "c81b2a1d-2cf0-4891-8a9d-8dc744a6ce83",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Insert name :  Nelsa Safitri\n",
+      "Insert age :  19\n",
+      "Insert adress :  New York\n",
+      "Insert dollar :  15000\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Nelsa Safitri tidak mencurigakan\n"
+     ]
+    }
+   ],
+   "source": [
+    "name = input(\"Insert name : \")\n",
+    "age = int(input(\"Insert age : \"))\n",
+    "adress = input(\"Insert adress : \")\n",
+    "dollar = int(input(\"Insert dollar : \"))\n",
+    "\n",
+    "pangkat = ''\n",
+    "\n",
+    "if age > 40:\n",
+    "    if adress == \"Nevada\" or adress == \"New York\" or adress == \"Havana\":\n",
+    "        if dollar > 10000000:\n",
+    "            pangkat = 'Don'\n",
+    "elif age >= 25 and age <=40:\n",
+    "    if adress == \"New Jersey\" or adress == \"Manhattan\" or adress == \"Nevada\":\n",
+    "        if dollar >= 1000000 and dollar <= 2000000:\n",
+    "            pangkat = 'Underboss'\n",
+    "elif age >= 18 and age <= 24:\n",
+    "    if adress == \"California\" or adress == \"Detroit\" or adress == \"Boston\":\n",
+    "        if dollar < 1000000:\n",
+    "            pangkat = 'Capo'\n",
+    "if pangkat !='':\n",
+    "    print(f\"{name} kemungkinan adalah seorang anggota mafia dengan pangkat {pangkat}\")\n",
+    "else:\n",
+    "    print(f\"{name} tidak mencurigakan\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
